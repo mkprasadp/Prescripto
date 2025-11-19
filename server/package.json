@@ -6,12 +6,15 @@
   "type": "module",
   "scripts": {
     "start": "node server",
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/preset-env": "^7.28.5",
+    "@google-cloud/storage": "^7.17.3",
     "cloudinary": "^2.8.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
@@ -22,5 +25,9 @@
     "nodemailer": "^7.0.10",
     "nodemon": "^3.1.10",
     "validator": "^13.15.15"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4"
   }
 }

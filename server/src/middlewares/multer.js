@@ -1,11 +1,5 @@
-import multer from 'multer';
+import multer from "multer";
 
-const Stroage = multer.diskStorage({
-    filename:function(req,file,callback){
-        callback(null,file.originalname);
-    }
-})
+const storage = multer.memoryStorage();
 
-const upload = multer({Stroage});
-
-export default upload
+export default multer({ storage });

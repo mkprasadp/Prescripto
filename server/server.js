@@ -14,8 +14,8 @@ app.use(express.json());
 
 app.use('/api/admin',adminRoutes)
 
-await connectDB();
-await connectCloud();
+//await connectDB();
+//await connectCloud();
 
 app.get('/',(req,res)=>{
     res.send('Server is running');
@@ -24,3 +24,5 @@ app.get('/',(req,res)=>{
 app.listen(PORT,()=>{
     console.log(`Server is running on port ${PORT}`);
 })
+
+export default app;
