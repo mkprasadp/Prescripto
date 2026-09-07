@@ -17,7 +17,7 @@ const Contact = () => {
           <p>Tel: (000) 000-0000 <br /> Email: greatstackdev@gmail.com</p>
           <b>CAREERS AT PRESCRIPTO</b>
           <p>Learn more about our teams and job openings.</p>
-        <button className="items-start flex  px-8 w-1/2 py-3 border cursor-pointer hover:bg-black transition-all duration-500 hover:text-white">Explore Jobs</button>
+        <button className="items-start flex  px-8 w-1/2 py-3 border hover:bg-black transition-all duration-500 hover:text-white">Explore Jobs</button>
         </div>
       </div>
     </div>

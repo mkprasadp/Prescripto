@@ -1,27 +1,32 @@
-import express from 'express';
+import express from 'express'
 import cors from 'cors'
+import bodyParser from 'body-parser'
 import 'dotenv/config'
-import connectDB from './src/Config/db.js';
-import connectCloud from './src/Config/Cloudinary.js';
-import adminRoutes from './src/Routes/adminRoutes.js';
+import connectDB from './config/mongodb.js'
+import connectToCloudinary from './config/cloudinary.js'
+import adminRuter from './routes/adminRoutes.js'
+import docRouter from './routes/doctorRoutes.js'
+import userRoute from './routes/userRoutes.js'
 
-const app = express();
-//const PORT = 5000 || process.env.PORT;
+const app =express()
+const port = process.env.PORT || 4000
+await connectDB()
+connectToCloudinary()
+// middlewares
 
-app.use(cors());
-app.use(express.json());
+app.use(express.json())
+app.use(cors())
 
+// api endpoints
+app.use('/api/admin',adminRuter)
+app.use('/api/doctor/',docRouter)
+app.use('/api/user',userRoute)
 
-app.use('/api/admin',adminRoutes)
 
 app.get('/',(req,res)=>{
-    res.send('Server is running');
+  res.send('API working ok')
 })
 
-/*
-app.listen(PORT,()=>{
-    console.log(`Server is running on port ${PORT}`);
+app.listen(port,()=>{
+  console.log('Server starts on ',port)
 })
-*/
-
-export default app;

@@ -1,9 +1,13 @@
 FROM node:18
 
 WORKDIR /app
+
 COPY package*.json ./
-RUN npm install --production
+
+RUN npm install
+
 COPY . .
 
 EXPOSE 5000
-CMD ["npm", "run", "server"]
+
+CMD ["node", "server.js"]

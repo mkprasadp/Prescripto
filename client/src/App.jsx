@@ -1,32 +1,34 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Home from './Pages/Home'
-import Doctors from './Pages/Doctors';
-import Login from './Pages/Login';
-import About from './Pages/About';
-import Contact from './Pages/Contact';
-import MyProfile from './Pages/MyProfile';
-import MyAppointments from './Pages/MyAppointments';
-import Appointment from './Pages/Appointment';
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
+import { Routes,Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+import About from './pages/About'
+import Login from './pages/Login'
+import MyAppointments from './pages/MyAppointments'
+import Doctors from './pages/Doctors'
+import Appointment from './pages/Appointment'
+import MyProfile from './pages/MyProfile'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import { ToastContainer, toast } from "react-toastify";
 
 const App = () => {
   return (
     <div className='mx-4 sm:mx-[10%]'>
       <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>}/> 
-        <Route path='/doctors' element={<Doctors/>}/>
-        <Route path='/doctors/:speciality' element={<Doctors/>}/>
-        <Route path='/login' element={<Login/>}/>
+     <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/contact' element={<Contact/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='/content' element={<Contact/>}/>
-        <Route path='/my-profile' element={<MyProfile/>}/>
+        <Route path='/login' element={<Login/>}/>
         <Route path='/my-appointments' element={<MyAppointments/>}/>
+        <Route path='/doctors' element={<Doctors/>}/>
         <Route path='/appointment/:docId' element={<Appointment/>}/>
-      </Routes>
-      <Footer/>
+        <Route path='/my-profile' element={<MyProfile/>}/>
+        <Route path='/doctors/:speciality' element={<Doctors/>}/>
+     </Routes>
+     <Footer/>
+     <ToastContainer/>
     </div>
   )
 }

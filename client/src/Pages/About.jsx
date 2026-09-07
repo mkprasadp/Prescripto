@@ -13,7 +13,11 @@ const About = () => {
       </div>
 
       <div className=" flex flex-col md:flex-row  gap-12 my-10">
-        <img className="w-full md:max-w-[360px]" src={assets.about_image} alt="" />
+        <img
+          className="w-full md:max-w-[360px]"
+          src={assets.about_image}
+          alt=""
+        />
         <div className="flex-col flex text-sm gap-6 md:w-2/4 text-gray-600 justify-center ">
           <p>
             Welcome to Prescripto, your trusted partner in managing your
@@ -38,29 +42,29 @@ const About = () => {
           </p>
         </div>
       </div>
-
       <div>
+     
         <p className=" text-gray-600  text-2xl">
           WHY <span className=" font-medium text-black">CHOOSE US</span>
         </p>
       </div>
 
       
-      <div className="mb-20 my-5 flex flex-col md:flex-row" >
-        <div className="border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary  transition-all duration-500 hover:text-white  cursor-pointer">
-          <b>EFFICIENCY:</b>
-          <p>Streamlined appointment scheduling that fits into your busy lifestyle.</p>
-        </div>
-        <div className="border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary  transition-all duration-500 hover:text-white  cursor-pointer">
-          <b>CONVENIENCE:</b>
-          <p>Access to a network of trusted healthcare professionals in your area.</p>
-        </div>
-        <div className="border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary  transition-all duration-500 hover:text-white  cursor-pointer">
-          <b>PERSONALIZATION:</b>
-          <p>Tailored recommendations and reminders to help you stay on top of your health.</p>
+        <div className="mb-20 my-5 flex flex-col md:flex-row" >
+          <div className="border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary  transition-all duration-500 hover:text-white  cursor-pointer">
+            <b>EFFICIENCY:</b>
+            <p>Streamlined appointment scheduling that fits into your busy lifestyle.</p>
+          </div>
+          <div className="border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary  transition-all duration-500 hover:text-white  cursor-pointer">
+            <b>CONVENIENCE:</b>
+            <p>Access to a network of trusted healthcare professionals in your area.</p>
+          </div>
+          <div className="border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary  transition-all duration-500 hover:text-white  cursor-pointer">
+            <b>PERSONALIZATION:</b>
+            <p>Tailored recommendations and reminders to help you stay on top of your health.</p>
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 
